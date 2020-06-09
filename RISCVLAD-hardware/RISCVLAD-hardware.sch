@@ -60,12 +60,12 @@ $EndComp
 $Comp
 L power:VDDA #PWR?
 U 1 1 5EE064DA
-P 3450 800
-F 0 "#PWR?" H 3450 650 50  0001 C CNN
-F 1 "VDDA" H 3467 973 50  0000 C CNN
-F 2 "" H 3450 800 50  0001 C CNN
-F 3 "" H 3450 800 50  0001 C CNN
-	1    3450 800 
+P 3450 750
+F 0 "#PWR?" H 3450 600 50  0001 C CNN
+F 1 "VDDA" H 3467 923 50  0000 C CNN
+F 2 "" H 3450 750 50  0001 C CNN
+F 3 "" H 3450 750 50  0001 C CNN
+	1    3450 750 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -239,7 +239,7 @@ JTAG
 Text Notes 6100 3400 0    50   ~ 0
 JTDO PB3\nNJRST PB4
 Text Notes 6100 3650 0    50   ~ 0
-JTMS  PA13\nJTCK  PA14\nJTDI  PD15\n
+JTMS  PA13\nJTCK  PA14\nJTDI  PA15\n
 Wire Wire Line
 	4500 3350 4900 3350
 Wire Wire Line
@@ -248,4 +248,124 @@ Text Label 4900 3350 2    50   ~ 0
 USBD+
 Text Label 4900 3250 2    50   ~ 0
 USBD-
+Wire Wire Line
+	4500 4200 4900 4200
+Wire Wire Line
+	4500 4300 4900 4300
+Text Label 4900 4200 2    50   ~ 0
+JTDO
+Text Label 4900 4300 2    50   ~ 0
+JTNRST
+Wire Wire Line
+	4500 3450 4900 3450
+Wire Wire Line
+	4500 3550 4900 3550
+Wire Wire Line
+	4500 3650 4900 3650
+Text Label 4900 3450 2    50   ~ 0
+JTMS
+Text Label 4900 3550 2    50   ~ 0
+JTCK
+Text Label 4900 3650 2    50   ~ 0
+JTDI
+Wire Wire Line
+	3450 750  3450 800 
+Wire Wire Line
+	3450 800  2800 800 
+Wire Wire Line
+	2800 800  2800 900 
+Connection ~ 3450 800 
+Wire Wire Line
+	3450 800  3450 1500
+$Comp
+L Device:C_Small C?
+U 1 1 5EE1763E
+P 2800 1000
+F 0 "C?" H 2892 1046 50  0000 L CNN
+F 1 "C_Small" H 2892 955 50  0000 L CNN
+F 2 "" H 2800 1000 50  0001 C CNN
+F 3 "~" H 2800 1000 50  0001 C CNN
+	1    2800 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5EE17C7E
+P 2500 1000
+F 0 "C?" H 2592 1046 50  0000 L CNN
+F 1 "C_Small" H 2592 955 50  0000 L CNN
+F 2 "" H 2500 1000 50  0001 C CNN
+F 3 "~" H 2500 1000 50  0001 C CNN
+	1    2500 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 800  2500 800 
+Wire Wire Line
+	2500 800  2500 900 
+Connection ~ 2800 800 
+Wire Wire Line
+	2500 1100 2500 1200
+Wire Wire Line
+	2800 1100 2800 1200
+$Comp
+L power:GND #PWR?
+U 1 1 5EE194A1
+P 2500 1200
+F 0 "#PWR?" H 2500 950 50  0001 C CNN
+F 1 "GND" H 2505 1027 50  0000 C CNN
+F 2 "" H 2500 1200 50  0001 C CNN
+F 3 "" H 2500 1200 50  0001 C CNN
+	1    2500 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EE19994
+P 2800 1200
+F 0 "#PWR?" H 2800 950 50  0001 C CNN
+F 1 "GND" H 2805 1027 50  0000 C CNN
+F 2 "" H 2800 1200 50  0001 C CNN
+F 3 "" H 2800 1200 50  0001 C CNN
+	1    2800 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 6250 3500 6650
+Wire Wire Line
+	3800 6250 3800 6400
+Wire Wire Line
+	3950 6250 3950 6400
+Connection ~ 3800 6400
+Wire Wire Line
+	3800 6400 3800 6650
+Wire Wire Line
+	4100 6250 4100 6400
+Wire Wire Line
+	3800 6400 3950 6400
+Connection ~ 3950 6400
+Wire Wire Line
+	3950 6400 4100 6400
+Wire Wire Line
+	4250 6250 4250 6400
+Wire Wire Line
+	4250 6400 4100 6400
+Connection ~ 4100 6400
+Wire Wire Line
+	3200 2300 2650 2300
+Wire Wire Line
+	2650 2300 2650 2000
+$Comp
+L power:+BATT #PWR?
+U 1 1 5EE1DFF6
+P 2650 2000
+F 0 "#PWR?" H 2650 1850 50  0001 C CNN
+F 1 "+BATT" H 2665 2173 50  0000 C CNN
+F 2 "" H 2650 2000 50  0001 C CNN
+F 3 "" H 2650 2000 50  0001 C CNN
+	1    2650 2000
+	1    0    0    -1  
+$EndComp
+Text Notes 6600 4350 2    50   ~ 0
+Things I want \nscreen  SPI\nbuttons IO + ADC??  \naudio DAC (1 or 2 chan) \nbattery Power\nsdcard SPI\ngyro??\nwifi??\n
 $EndSCHEMATC
