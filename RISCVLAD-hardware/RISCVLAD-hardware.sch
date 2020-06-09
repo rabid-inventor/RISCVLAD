@@ -367,5 +367,9 @@ F 3 "" H 2650 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 6600 4350 2    50   ~ 0
-Things I want \nscreen  SPI\nbuttons IO + ADC??  \naudio DAC (1 or 2 chan) \nbattery Power\nsdcard SPI\ngyro??\nwifi??\n
+Things I want \nscreen  SPI 47mm x43mm 160x144pix\nbuttons IO + ADC??  \naudio DAC (1 or 2 chan) \nbattery Power\nsdcard SPI\ngyro??\nwifi??\n
+Text Notes 7600 2700 2    50   ~ 0
+possible 2.2 240x320\n
+Text Notes 7100 2900 2    50   ~ 0
+ili9341
 $EndSCHEMATC
