@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -369,128 +369,8 @@ F 3 "" H 2650 2000 50  0001 C CNN
 $EndComp
 Text Notes 6600 4350 2    50   ~ 0
 Things I want \nscreen  SPI 47mm x43mm 160x144pix\nbuttons IO + ADC??  \naudio DAC (1 or 2 chan) \nbattery Power\nsdcard SPI\ngyro??\nwifi??\n
-Text Notes 7600 2700 2    50   ~ 0
-possible 2.2 240x320\n
 Text Notes 7100 2900 2    50   ~ 0
 ili9341
-$Comp
-L Connector:USB_C_Receptacle J?
-U 1 1 5F3D9CC2
-P 8350 2150
-F 0 "J?" H 8455 3717 50  0000 C CNN
-F 1 "USB_C_Receptacle" H 8455 3626 50  0000 C CNN
-F 2 "" H 8500 2150 50  0001 C CNN
-F 3 "http://www.usb.org/developers/docs/usb_31_033017.zip" H 8500 2150 50  0001 C CNN
-	1    8350 2150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8950 1950 9050 1950
-Wire Wire Line
-	8950 1650 9050 1650
-Text Label 9350 1950 2    50   ~ 0
-USBD+
-Text Label 9350 1650 2    50   ~ 0
-USBD-
-Wire Wire Line
-	8950 1850 9050 1850
-Wire Wire Line
-	9050 1850 9050 1950
-Connection ~ 9050 1950
-Wire Wire Line
-	9050 1950 9350 1950
-Wire Wire Line
-	8950 1750 9050 1750
-Wire Wire Line
-	9050 1750 9050 1650
-Connection ~ 9050 1650
-Wire Wire Line
-	9050 1650 9350 1650
-Wire Wire Line
-	8950 1350 9950 1350
-Wire Wire Line
-	8950 1450 9800 1450
-Wire Wire Line
-	9800 1450 9800 1550
-Wire Wire Line
-	9950 1350 9950 1550
-$Comp
-L Device:R_Small R?
-U 1 1 5F3E0107
-P 9800 1650
-F 0 "R?" H 9859 1696 50  0000 L CNN
-F 1 "R_Small" H 9859 1605 50  0000 L CNN
-F 2 "" H 9800 1650 50  0001 C CNN
-F 3 "~" H 9800 1650 50  0001 C CNN
-	1    9800 1650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R?
-U 1 1 5F3E0272
-P 9950 1650
-F 0 "R?" H 10009 1696 50  0000 L CNN
-F 1 "R_Small" H 10009 1605 50  0000 L CNN
-F 2 "" H 9950 1650 50  0001 C CNN
-F 3 "~" H 9950 1650 50  0001 C CNN
-	1    9950 1650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9800 1750 9800 1950
-Wire Wire Line
-	9800 1950 9950 1950
-Wire Wire Line
-	9950 1950 9950 1750
-Wire Wire Line
-	9950 1950 9950 2050
-Connection ~ 9950 1950
-$Comp
-L power:GND #PWR?
-U 1 1 5F3E220F
-P 9950 2050
-F 0 "#PWR?" H 9950 1800 50  0001 C CNN
-F 1 "GND" H 9955 1877 50  0000 C CNN
-F 2 "" H 9950 2050 50  0001 C CNN
-F 3 "" H 9950 2050 50  0001 C CNN
-	1    9950 2050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8050 3750 8050 3950
-Wire Wire Line
-	8050 3950 8150 3950
-Wire Wire Line
-	8450 3950 8450 3750
-Wire Wire Line
-	8150 3750 8150 3950
-Connection ~ 8150 3950
-Wire Wire Line
-	8150 3950 8250 3950
-Wire Wire Line
-	8250 3750 8250 3950
-Connection ~ 8250 3950
-Wire Wire Line
-	8250 3950 8350 3950
-Wire Wire Line
-	8350 3750 8350 3950
-Connection ~ 8350 3950
-Wire Wire Line
-	8350 3950 8450 3950
-Wire Wire Line
-	8450 3950 8450 4200
-Connection ~ 8450 3950
-$Comp
-L power:GND #PWR?
-U 1 1 5F3E8183
-P 8450 4200
-F 0 "#PWR?" H 8450 3950 50  0001 C CNN
-F 1 "GND" H 8455 4027 50  0000 C CNN
-F 2 "" H 8450 4200 50  0001 C CNN
-F 3 "" H 8450 4200 50  0001 C CNN
-	1    8450 4200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3200 2750 2700 2750
 Wire Wire Line
@@ -566,4 +446,135 @@ F 3 "" H 1700 3250 50  0001 C CNN
 	1    1700 3250
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:Conn_01x10_Male J?
+U 1 1 5F7E0176
+P 7900 5500
+F 0 "J?" H 8006 6078 50  0000 C CNN
+F 1 "Conn_01x10_Male" H 8006 5987 50  0000 C CNN
+F 2 "" H 7900 5500 50  0001 C CNN
+F 3 "~" H 7900 5500 50  0001 C CNN
+	1    7900 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 5100 8550 5100
+Wire Wire Line
+	8100 5200 8550 5200
+Wire Wire Line
+	8100 5300 8550 5300
+Wire Wire Line
+	8100 5400 8550 5400
+Wire Wire Line
+	8100 5500 8550 5500
+Wire Wire Line
+	8100 5600 8550 5600
+Wire Wire Line
+	8100 5700 8550 5700
+Wire Wire Line
+	8100 5800 8550 5800
+Wire Wire Line
+	8100 5900 8550 5900
+Wire Wire Line
+	8100 6000 8550 6000
+Text Label 8550 5300 2    50   ~ 0
+JTMS
+Text Label 8550 5400 2    50   ~ 0
+JTCK
+Text Label 8550 5500 2    50   ~ 0
+JTDI
+Text Label 8550 5600 2    50   ~ 0
+JTDO
+Text Label 8550 5700 2    50   ~ 0
+JTNRST
+Text Label 8550 5800 2    50   ~ 0
+BOOT0
+Text Label 8550 5900 2    50   ~ 0
+RESET
+Wire Wire Line
+	4500 2450 4900 2450
+Wire Wire Line
+	4500 2550 4900 2550
+Text Label 4900 2450 2    50   ~ 0
+DAC_OUT0
+Text Label 4900 2550 2    50   ~ 0
+DAC_OUT1
+Text Label 4800 3050 0    50   ~ 0
+UART0_TX
+Text Label 4800 3150 0    50   ~ 0
+UART0_RX
+Text Label 4650 5500 0    50   ~ 0
+SPI1_MOSI
+Text Label 4650 5400 0    50   ~ 0
+SPI1_MISO
+Text Label 4650 5300 0    50   ~ 0
+SPI1_SCK
+Text Label 4650 5200 0    50   ~ 0
+SPI1_NSS
+Text Label 4650 5000 0    50   ~ 0
+I2C1_SCL
+Text Label 4650 5100 0    50   ~ 0
+I2C1_SDA
+Text Label 4650 4500 0    50   ~ 0
+I2C0_SCL
+Text Label 4650 4600 0    50   ~ 0
+I2C0_SDA
+Text Label 2600 3900 0    50   ~ 0
+ADC1_IN10
+Text Label 2600 4000 0    50   ~ 0
+ADC1_IN11
+Text Label 2600 4100 0    50   ~ 0
+ADC1_IN12
+Text Label 2600 4200 0    50   ~ 0
+ADC1_IN13
+Text Label 2700 5000 0    50   ~ 0
+SPI2_SCK
+Text Label 2700 5100 0    50   ~ 0
+SPI2_MISO
+Text Label 2700 5200 0    50   ~ 0
+SPI2_MOSI
+Text Label 2650 5500 0    50   ~ 0
+OSC32_OUT
+Text Label 2650 5400 0    50   ~ 0
+OSC32_IN
+Wire Wire Line
+	2600 3900 3200 3900
+Wire Wire Line
+	2600 4100 3200 4100
+Wire Wire Line
+	2600 4000 3200 4000
+Wire Wire Line
+	3200 4200 2600 4200
+Wire Wire Line
+	2700 5000 3200 5000
+Wire Wire Line
+	3200 5100 2700 5100
+Wire Wire Line
+	3200 5200 2700 5200
+Wire Wire Line
+	4500 5200 4650 5200
+Wire Wire Line
+	4650 5300 4500 5300
+Wire Wire Line
+	4500 5400 4650 5400
+Wire Wire Line
+	4500 5500 4650 5500
+Wire Wire Line
+	4650 5100 4500 5100
+Wire Wire Line
+	4650 5000 4500 5000
+Wire Wire Line
+	2650 5400 3200 5400
+Wire Wire Line
+	3200 5500 2650 5500
+Wire Wire Line
+	4650 4500 4500 4500
+Wire Wire Line
+	4500 4600 4650 4600
+$Sheet
+S 5300 5850 1450 1400
+U 5F858DBA
+F0 "Sheet5F858DB9" 50
+F1 "Powersystem.sch" 50
+$EndSheet
 $EndSCHEMATC
